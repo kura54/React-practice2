@@ -3,19 +3,20 @@ import { ChilsdArea } from "./ChilsdArea";
 import "./styles.css";
 
 export default function App() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
+  const [open, setOpen] = useState(false);
 
-  const onClickCountup = () => {
-    setCount(count + 1);
-  };
+  const onChangeText = (e) => setText(e.target.value);
+
+  const onClickOpen = () => setOpen(!open);
 
   return (
     <div className="App">
-      <input value />
+      <input value={text} onChange={onChangeText} />
       <br />
       <br />
-      <button>表示</button>
-      <ChilsdArea />
+      <button onClick={onClickOpen}>表示</button>
+      <ChilsdArea open={open} />
     </div>
   );
 }
