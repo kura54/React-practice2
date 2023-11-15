@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { ChilsdArea } from "./ChilsdArea";
 import "./styles.css";
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  const [text, setText] = useState('');
 
   const onClickCountup = () => {
     setCount(count + 1);
@@ -10,10 +11,11 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <p>{count}</p>
-      <button onClick={onClickCountup}>カウントアップ</button>
+      <input value />
+      <br />
+      <br />
+      <button>表示</button>
+      <ChilsdArea />
     </div>
   );
 }
