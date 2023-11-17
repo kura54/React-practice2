@@ -10,7 +10,7 @@ export default function App() {
 
   const onClickOpen = () => setOpen(!open);
 
-  const onClickClose = () => setOpen(false);
+  const onClickClose = useCallback(() => setOpen(false), []);
 
   return (
     <div className="App">
